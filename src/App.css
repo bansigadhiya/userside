@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bs-primary-rgb: 85, 147, 149 !important;
+  --bs-secondary-rgb: 181, 241, 244 !important;
+  --bs-primary: #559395 !important;
+  --bs-secondary: #b5f1f4 !important;
+  --bs-gray : #a5a4a4 !important;
+  --bs-gray-rgb : 165, 164, 164 !important;
+}
+.text-gray {
+  color: var(--bs-gray) !important;
+}
