@@ -1,0 +1,22 @@
+.social .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--bs-light);
+    color: var(--bs-primary);
+    font-size: 15px;
+    border-radius: 50%;
+}
+.social p{
+    font-size: 13px;
+}
+.links ul a,.contact ul a{
+    display: block;
+    text-decoration: none;
+    color: var(--bs-light);
+    font-size: 13px;
+    padding: 8px 0;
+    font-weight: 400;
+}

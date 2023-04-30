@@ -3,6 +3,7 @@ import { Button, Card, Container, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProductAsync } from '../../Services/Actions/Product.action';
 import './Product.css';
+import { json } from 'react-router-dom';
 
 function Products() {
 
@@ -11,13 +12,22 @@ function Products() {
 
     useEffect(() => {
         dispatch(getProductAsync())
-    })
+    }, [])
+
+    const images = [
+        "images/product-1.jpeg",
+        "images/product-2.jpeg",
+        "images/product-3.jpeg",
+        "images/product-4.jpeg",
+        "images/product-5.jpeg",
+        "images/product-6.jpeg",
+    ]
 
     return (
         <section className='py-100'>
             <dir>
                 <Container>
-                    <div className="heading text-center mb-3">
+                    <div className="heading text-center mb-3 w-50 mx-auto">
                         <h3 className='text-primary'>Our Products</h3>
                         <p className='text-gray m-0'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tempora voluptatem voluptatibus inventore neque adipisci</p>
                     </div>
@@ -27,20 +37,22 @@ function Products() {
 
                                 return (
                                     <div className="col-3">
-                                        <Card className='mt-4 bg-primary text-white border-0 shadow-sm'>
-                                        <Card.Img variant="top" src="holder.js/100px180" />
-                                            <Card.Body>
-                                                <Card.Title>{pro.name}</Card.Title>
-                                                <Card.Text>
+                                        <Card className='mt-4 bg-primary text-white border-0 shadow-sm p-1 rounded-0'>
+                                            <Card.Img variant="top" src="images/product-5.jpeg" />
+                                            <Card.Body className='bg-light'>
+                                                <Card.Text className='mb-3 text-primary'>
+                                                    {`Name : ${pro.name}`}
+                                                </Card.Text>
+                                                <Card.Text className='text-primary'>
                                                     {`Category : ${pro.category}`}
                                                 </Card.Text>
-                                                <Card.Text>
+                                                <Card.Text className='text-primary'>
                                                     {`Price : ${pro.price} Rs.`}
                                                 </Card.Text>
-                                                <Card.Text>
+                                                <Card.Text className='text-primary'>
                                                     {`Detail : ${pro.detail}`}
                                                 </Card.Text>
-                                                <Button className='bg-light rounded-0 text-primary border-0 px-3'>Add to cart</Button>
+                                                <Button className='bg-primary rounded-0 text-light border-0 px-3'>Add to cart</Button>
                                             </Card.Body>
                                         </Card>
                                     </div>

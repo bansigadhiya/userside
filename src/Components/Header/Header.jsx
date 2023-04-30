@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
+import './Header.css';
 
 function Header() {
   return (
@@ -13,13 +14,13 @@ function Header() {
             <nav>
               <ul className='d-flex list-unstyled m-0'>
                 <li>
-                  <a href='#' className='text-primary fw-semibold text-decoration-none px-3'>Home</a>
+                  <a href='#' className='text-primary text-decoration-none px-3'>Home</a>
                 </li>
                 <li>
-                  <a href='#' className='text-primary fw-semibold text-decoration-none px-3'>Products</a>
+                  <a href='#' className='text-primary text-decoration-none px-3'>Products</a>
                 </li>
                 <li>
-                  <a href='#' className='text-primary fw-semibold text-decoration-none px-3'>About</a>
+                  <a href='#' className='text-primary text-decoration-none px-3'>About</a>
                 </li>
               </ul>
             </nav>
